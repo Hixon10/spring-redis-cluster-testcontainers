@@ -8,7 +8,7 @@
 
 ## How it works
 
-The main idea of this example is manual NAT port mapping, which is implemented in `ru/hixon/springredisclustertestcontainers/RedisConfig.java`
+The main idea of this example is manual NAT port mapping, which is implemented in [ru/hixon/springredisclustertestcontainers/RedisConfig.java](https://github.com/Hixon10/spring-redis-cluster-testcontainers/blob/master/src/test/java/ru/hixon/springredisclustertestcontainers/RedisConfig.java)
 
 Manual NAT port mapping is needed, because of implementation details of the Redis cluster node discover algorithm. Redis Cluster uses gossip in order to auto-discover nodes. Each cluster node announces its `IP` and `port`, and the application uses these IPs and PORTs for updating cluster topology (`io.lettuce.core.cluster.topology.DefaultClusterTopologyRefresh`). So, the application has to be able to connect to these addresses. 
 
