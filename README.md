@@ -16,5 +16,5 @@ The current example uses `grokzen/redis-cluster:6.0.7` docker image, which runs 
 
 There are 2 solutions to this problem. 
 
-1. You could create docker image and set up correct settings for `cluster-announce-port` and `cluster-announce-bus-port`
+1. You could create docker image and set up correct settings for `cluster-announce-port` and `cluster-announce-ip`
 2. You could implement NAT port mapping on the application side. It is a workaround, but who cares, if it is only about tests. I've chosen this option.
