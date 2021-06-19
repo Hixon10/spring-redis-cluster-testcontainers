@@ -22,7 +22,7 @@ class NumberServiceTests extends AbstractIntegrationTest {
         for (int i = 1; i < 100; i++) {
             Optional<Integer> result = numberService.get(i);
             Assertions.assertTrue(result.isPresent());
-            Assertions.assertEquals(3 * i, result.get());
+            Assertions.assertEquals(2 * i, result.get());
         }
     }
 
